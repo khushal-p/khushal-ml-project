@@ -1,0 +1,19 @@
+# Training Configuration
+model:
+  type: gradient_boosting
+  n_estimators: 200
+  max_depth: 5
+  learning_rate: 0.1
+
+training:
+  test_size: 0.2
+  random_state: 42
+  cv_folds: 5
+
+data:
+  target_column: price
+  features:
+    - area
+    - bedrooms
+    - locality
+    - age
